@@ -322,6 +322,7 @@ class SSARecordTest(unittest.TestCase):
         self.assertEquals(self.rec.instr, b"SDSS 2.5-M SPEC2 v4_5")
         self.assertEquals(self.rec.acref, self.acref)
         self.assertEquals(self.rec.getdataurl(), self.acref)
+        self.assert_(self.rec.filesize is None)
 
 class SSAExecuteTest(unittest.TestCase):
 

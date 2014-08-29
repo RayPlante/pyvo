@@ -626,6 +626,7 @@ class SIAResults(query.DALResults):
                            "format":  self._siacols["VOX:Image_Format"],
                            "naxes":   self._siacols["VOX:Image_Naxes"],
                            "naxis":   self._siacols["VOX:Image_Naxis"],
+                           "filesize": self._siacols["VOX:Image_FileSize"],
                            "acref":   self._siacols["VOX:Image_AccessReference"]
                            }
         
@@ -731,6 +732,13 @@ class SIARecord(query.Record):
         data that went into this image.
         """
         return self.get(self._names["instr"])
+
+    @property
+    def filesize(self):
+        """
+        the size of the downloadable image file in bytes.
+        """
+        return self.get(self._names["filesize"])
 
     @property
     def acref(self):

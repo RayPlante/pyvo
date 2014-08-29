@@ -667,6 +667,7 @@ class SSAResults(query.DALResults):
                            # This does not exist specifically in SSA but the closest is
                            "dateobs": self._ssacols["ssa:DataID.Date"],
                            "format":  self._ssacols["ssa:Access.Format"],
+                           "filesize":  self._ssacols["ssa:Access.Size"],
                            "acref":   self._ssacols["ssa:Access.Reference"]
                            }
         
@@ -757,6 +758,13 @@ class SSARecord(query.Record):
         data that went into this spectrum.
         """
         return self.get(self._names["instr"])
+
+    @property
+    def filesize(self):
+        """
+        the size of the downloadable spectrum file in bytes.
+        """
+        return self.get(self._names["filesize"])
 
     @property
     def acref(self):

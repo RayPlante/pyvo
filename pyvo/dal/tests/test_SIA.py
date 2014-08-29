@@ -412,6 +412,7 @@ class SIARecordTest(unittest.TestCase):
         self.assert_(self.rec.instr is None)
         self.assertEquals(self.rec.acref, self.acref)
         self.assertEquals(self.rec.getdataurl(), self.acref)
+        self.assert_(self.rec.filesize is None)
 
 class SIAExecuteTest(unittest.TestCase):
 
