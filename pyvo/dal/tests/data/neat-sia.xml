@@ -38,7 +38,7 @@
     <DATA><TABLEDATA>
 <TR><TD>neat</TD><TD>0.0</TD><TD>0.0</TD><TD>2</TD><TD>300 300</TD><TD>-0.0033333333333333335 0.0033333333333333335</TD><TD>image/fits</TD><TD>F</TD><TD><![CDATA[http://skyview.gsfc.nasa.gov/cgi-bin/images?position=0.0%2C0.0&survey=neat&pixels=300%2C300&sampler=Clip&size=1.0%2C1.0&projection=Tan&coordinates=J2000.0&return=FITS]]></TD>
 <TD>1</TD></TR>
-<TR><TD>neat</TD><TD>0.0</TD><TD>0.0</TD><TD>2</TD><TD>300 300</TD><TD>-0.0033333333333333335 0.0033333333333333335</TD><TD>image/jpeg</TD><TD>F</TD><TD><![CDATA[http://skyview.gsfc.nasa.gov/cgi-bin/images?position=0.0%2C0.0&survey=neat&pixels=300%2C300&sampler=Clip&size=1.0%2C1.0&projection=Tan&coordinates=J2000.0&nofits=1&quicklook=jpeg&return=jpeg]]></TD>
+<TR><TD>neat/cal i</TD><TD>0.0</TD><TD>0.0</TD><TD>2</TD><TD>300 300</TD><TD>-0.0033333333333333335 0.0033333333333333335</TD><TD>image/jpeg</TD><TD>F</TD><TD><![CDATA[http://skyview.gsfc.nasa.gov/cgi-bin/images?position=0.0%2C0.0&survey=neat&pixels=300%2C300&sampler=Clip&size=1.0%2C1.0&projection=Tan&coordinates=J2000.0&nofits=1&quicklook=jpeg&return=jpeg]]></TD>
 <TD>1</TD></TR>
 </TABLEDATA></DATA></TABLE>
 <INFO name="QUERY_STATUS" value="OK" />

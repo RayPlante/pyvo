@@ -403,6 +403,12 @@ class DatasetNameTest(unittest.TestCase):
                           self.rec.suggest_dataset_basename())
         self.assertEquals("xml", self.rec.suggest_extension("DAT"))
 
+        # this one need transforming
+        self.rec = self.result.getrecord(1)
+        self.assertEquals("SDSS-J115923.80+005905.16_GALAXY", 
+                          self.rec.suggest_dataset_basename())
+        self.assertEquals("xml", self.rec.suggest_extension("DAT"))
+
     def testMakeDatasetName(self):
         self.assertTrue(os.path.isdir(self.outdir))
         self.assertEquals("./SDSS_J115923.80+005905.16_GALAXY.xml", 

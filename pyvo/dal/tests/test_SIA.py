@@ -493,8 +493,16 @@ class DatasetNameTest(unittest.TestCase):
         title = self.rec.title
         if sys.version_info[0] >= 3:
             title = title.decode('utf-8')
+
+        # assuming no transformation needed
         self.assertEquals(title, self.rec.suggest_dataset_basename())
         self.assertEquals("fits", self.rec.suggest_extension("DAT"))
+
+        # this one need transforming
+        self.rec = self.result.getrecord(1)
+        self.assertEquals("neat-cal_i", self.rec.suggest_dataset_basename())
+        self.assertEquals("jpg", self.rec.suggest_extension("DAT"))
+
 
     def testMakeDatasetName(self):
         self.assertEquals("./neat.fits", self.rec.make_dataset_filename())
