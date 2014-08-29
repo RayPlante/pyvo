@@ -796,7 +796,7 @@ class SSARecord(query.Record):
         if not out:
             out = "spectrum"
         else:
-            out = re.sub(r'\s+', '_', out.strip())
+            out = re.sub(r'/+', '-', re.sub(r'\s+', '_', out.strip()))
         return out
 
     def suggest_extension(self, default=None):
