@@ -905,6 +905,16 @@ class Record(object):
     def cachedataset(self, filename=None, dir=".", timeout=None, bufsize=524288):
         """
         retrieve the dataset described by this record and write it out to 
+        a file with the given name.
+        DEPRECATED
+        """
+        warnings.warn("cachedataset deprecated; use save_dataset()", 
+                      DeprecationWarning)
+        return self.save_dataset(filename, dir, timeout, bufsize)
+
+    def save_dataset(self, filename=None, dir=".", timeout=None, bufsize=524288):
+        """
+        retrieve the dataset described by this record and write it out to 
         a file with the given name.  If the file already exists, it will be
         over-written.
 
